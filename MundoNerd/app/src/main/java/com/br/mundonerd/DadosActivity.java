@@ -13,7 +13,7 @@ import java.util.Random;
 public class DadosActivity extends AppCompatActivity {
 
     private Button bseis, bdoze, bvinte, bcen;
-    private TextView eu,app;
+    private TextView eu,app,vencedor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,16 +25,25 @@ public class DadosActivity extends AppCompatActivity {
         bcen = (Button) findViewById(R.id.cem);
         eu = (TextView) findViewById(R.id.voce6);
         app = (TextView) findViewById(R.id.app6);
+        vencedor = (TextView) findViewById(R.id.vencedor);
 
         bseis.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                Random rn = new Random();
+               Random rn = new Random();
                 int answer = rn.nextInt(7) ;
                 eu.setText(String.valueOf(answer));
-                int resp = rn.nextInt(7);
-                app.setText(String.valueOf(resp));
+               int resp = rn.nextInt(7);
+               app.setText(String.valueOf(resp));
+
+               if (answer > resp){
+                   vencedor.setText("Você venceu!");
+               }else if (answer == resp){
+                   vencedor.setText("O App venceu!");
+               }else{
+                   vencedor.setText("Empate!");
+               }
 
             }
         });
@@ -48,6 +57,14 @@ public class DadosActivity extends AppCompatActivity {
                 eu.setText(String.valueOf(answer));
                 int resp = rn.nextInt(13);
                 app.setText(String.valueOf(resp));
+
+                if (answer > resp){
+                    vencedor.setText("Você venceu!");
+                }else if (answer == resp){
+                    vencedor.setText("O App venceu!");
+                }else{
+                    vencedor.setText("Empate!");
+                }
             }
         });
 
@@ -60,6 +77,14 @@ public class DadosActivity extends AppCompatActivity {
                 eu.setText(String.valueOf(answer));
                 int resp = rn.nextInt(21);
                 app.setText(String.valueOf(resp));
+
+                if (answer > resp){
+                    vencedor.setText("Você venceu!");
+                }else if (answer == resp){
+                    vencedor.setText("O App venceu!");
+                }else{
+                    vencedor.setText("Empate!");
+                }
             }
         });
 
@@ -72,12 +97,21 @@ public class DadosActivity extends AppCompatActivity {
                 eu.setText(String.valueOf(answer));
                 int resp = rn.nextInt(101);
                 app.setText(String.valueOf(resp));
+
+                if (answer > resp){
+                    vencedor.setText("Você venceu!");
+                }else if (answer == resp){
+                    vencedor.setText("O App venceu!");
+                }else{
+                    vencedor.setText("Empate!");
+                }
             }
         });
 
 
 
     }
+
 
 
     public void voltarHome(View View){
