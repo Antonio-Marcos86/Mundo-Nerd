@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cinza"
+    tools:context=".HomeActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="411dp"
+        android:layout_height="183dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mundonerd" />
+
+    <Button
+        android:id="@+id/btnSorteador"
+        android:onClick="iniciaSorteador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:backgroundTint="@color/azul"
+        android:drawableRight="@drawable/ic_arrow"
+        android:padding="12dp"
+        android:text="Sorteador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnFrasesNerd"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/btnDados"
+        android:onClick="iniciaDados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:backgroundTint="@color/azul"
+        android:drawableRight="@drawable/ic_arrow"
+        android:padding="12dp"
+        android:text="Jogue os dados"
+        app:layout_constraintEnd_toStartOf="@+id/btnFrasesNerd"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnFrasesMotivacionais"
+        app:layout_constraintTop_toBottomOf="@+id/btnSorteador" />
+
+    <Button
+        android:id="@+id/btnFrasesNerd"
+        android:onClick="iniciaFrasesNerd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:backgroundTint="@color/azul"
+        android:drawableRight="@drawable/ic_arrow"
+        android:padding="12dp"
+        android:text="Frases mundo Nerd"
+        app:layout_constraintEnd_toStartOf="@+id/btnSorteador"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnDados"
+        app:layout_constraintTop_toBottomOf="@+id/btnDados" />
+
+    <Button
+        android:id="@+id/btnFrasesMotivacionais"
+        android:onClick="frases"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:backgroundTint="@color/azul"
+        android:drawableRight="@drawable/ic_arrow"
+        android:padding="12dp"
+        android:text="Frases Motivacionas"
+        app:layout_constraintEnd_toStartOf="@+id/btnDados"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFrasesNerd" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
